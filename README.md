@@ -59,6 +59,8 @@ Instead of creating anonymous object all day long, Java 8 comes with a much shor
 - (int x, int y) -> x+y
 - (x, y) -> x+y
 
+简化：
+
 - minimizing brackets. one parameter.
 - return keyword.
 
@@ -73,10 +75,11 @@ Scopes
 
 Java 8 enables you to pass references of methods or constructors via the :: keyword.
 
+assign to the functional interface.
 
 #### Optionals
 
-非functional interface，参照guava的optionals进行了实现。
+非functional interface，参照`guava`的optionals进行了实现。
 
 #### Streams
 
@@ -114,3 +117,14 @@ collections, file, etc.   stream(), parallelStream()
 - computeIfAbsent
 
 #### Date API
+
+TODO
+
+#### Annotations
+
+TODO
+
+#### JVM
+
+TODO
+
