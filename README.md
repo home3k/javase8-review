@@ -4,6 +4,8 @@
 
 #### Functional Interface
 
+函数式接口
+
 `@FunctionalInterface` 标识标注(informative annotation)
 
 它标识的interface，只能有一个abstract method。
@@ -31,6 +33,8 @@ public interface Runnable {
 
 Instead of creating anonymous object all day long, Java 8 comes with a much shorter syntax. `Lambda Expressions`
 
+将一段代码传递给其他调用者，代码稍后会被调用。
+
 格式：
 
 **Lambda parameter -> Lambda body**
@@ -48,8 +52,8 @@ Instead of creating anonymous object all day long, Java 8 comes with a much shor
 
 - (int x) -> x+1
 - (int x) -> {return x+1;}
-- (x) -> x+1
-- x -> x+1
+- (x) -> x+1   类型可被推导。
+- x -> x+1     只有一个参数，类型可被推导。
 
 - (String s) -> s.length
 - s -> s.length
@@ -58,6 +62,9 @@ Instead of creating anonymous object all day long, Java 8 comes with a much shor
 
 - (int x, int y) -> x+y
 - (x, y) -> x+y
+
+- (final String s) -> s.length
+- (@NotNull String s) -> s.length
 
 简化：
 
@@ -71,11 +78,21 @@ Scopes
 3. static variable.  `OK`
 4. default method.  `Default methods cannot be accessed from within lambda expressions.`
 
+函数式接口类型。lambda不是函数类型，java没有函数类型
+
 #### Method References. Constructor References.
 
 Java 8 enables you to pass references of methods or constructors via the :: keyword.
 
 assign to the functional interface.
+
+- 对象::实例方法
+- 类::静态方法
+- 类::实例方法
+
+this::equals    x -> this.equals(x)
+
+int[]::new     l -> new int[l]
 
 #### Optionals
 
