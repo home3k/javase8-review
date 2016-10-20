@@ -133,6 +133,9 @@ collections, file, etc.   stream(), parallelStream()
 - forEach
 - computeIfAbsent
 
+```java
+```
+
 #### Date API
 
 TODO
@@ -143,5 +146,6 @@ TODO
 
 #### JVM
 
-TODO
+Hotspot JVM [Remove the Permanent Generation](http://openjdk.java.net/jeps/122)
 
+Permanent Generation -> Metaspace
