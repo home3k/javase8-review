@@ -144,6 +144,14 @@ TODO
 
 TODO
 
+#### New new IO
+
+streaming
+
+```java
+      Files.list(new File(".").toPath()).filter(x->x.getFileName().toString().startsWith(".")).forEach(System.out::println);
+```
+
 #### JVM
 
 Hotspot JVM [Remove the Permanent Generation](http://openjdk.java.net/jeps/122)

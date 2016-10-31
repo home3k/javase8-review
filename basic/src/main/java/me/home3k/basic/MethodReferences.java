@@ -15,6 +15,10 @@ public class MethodReferences {
 
 }
 
+interface Callback {
+    boolean call();
+}
+
 interface Converter<T, F> {
 
     T convert(F value);
